@@ -14,5 +14,4 @@ class App extends Component {
         </Fragment>)
     }
 }
-
 ReactDOM.render(<App />, document.getElementById('app'));
