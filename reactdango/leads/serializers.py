@@ -11,7 +11,6 @@ class ClassNameSerializer(serializers.ModelSerializer):
         model = ClassName
         fields='__all__'
 
-
 class StudentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Students

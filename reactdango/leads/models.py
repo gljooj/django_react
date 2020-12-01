@@ -9,8 +9,17 @@ class Lead(models.Model):
 
 class ClassName(models.Model):
     name = models.CharField(max_length=100, blank=False)
+    
+    class Meta:
+        verbose_name_plural= 'classnames'
+        
+    def __str__(self) -> str:
+        return self.name
 
 class Students(models.Model):
     name = models.CharField(max_length=100, blank=False)
     on_class = models.BooleanField(default=False)
     classname = models.ForeignKey(ClassName, blank=True, null=True, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return self.name
